@@ -1,23 +1,24 @@
+// business Logic
 function ccvVal(number) {
   
   let numberArray = Array.from(String(number), Number);
+  // Array.from(elechange(parameter to change), current element)
   
-  numberArray.forEach(element => {
+  numberArray.forEach(function (element) {
   const vcc = numberArray.map(function(element) {
-  
   });
   });
 }
 
 
 
-//UI Logic
+// UI Logic
 
-$(document).ready(function(){
+$(document).ready(function() {
   $("form#ccv").submit(function(event){
     event.preventDefault();
     let number1 = parseInt($("#ccn").val());
-
-    $("#valid").html(ccvVal(number1));
+    ccvVal(number1);
+    // $("#valid").html();
   });
 });
